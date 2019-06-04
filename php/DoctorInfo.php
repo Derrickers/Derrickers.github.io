@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin：http://Derrickers.github.io");
+//header("Access-Control-Allow-Origin：http://Derrickers.github.io");
 $q = isset($_GET["q"]) ? intval($_GET["q"]) : '';
 
 if(empty($q)) {
@@ -41,7 +41,7 @@ else {
 
 $result = mysqli_query($con,$sql);
 
-echo "<br>
+/*echo "<br>
 <br><hr><br><table border='1'>
 <tr>
 <th>url</th>
@@ -49,7 +49,7 @@ echo "<br>
 <th>hospital</th>
 <th>name</th>
 <th>faculty</th>
-</tr>";
+</tr>";*/
 
 while($row = mysqli_fetch_array($result))
 {
