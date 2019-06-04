@@ -40,18 +40,10 @@ else {
   exit;
 }
 
-//$result = mysqli_query($con,$sql);
-$result = $con->query($sql);
+$result = mysqli_query($con,$sql);
 
-/*echo "<br>
-<br><hr><br><table border='1'>
-<tr>
-<th>url</th>
-<th>id</th>
-<th>hospital</th>
-<th>name</th>
-<th>faculty</th>
-</tr>";*/
+
+
 if($result){
   while($row = mysqli_fetch_array($result))
   {
