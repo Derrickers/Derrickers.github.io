@@ -7,15 +7,16 @@ if(empty($q)) {
     exit;
 }
 
-$con = mysqli_connect('10.203.209.240','root','25981745');
+//$con = mysqli_connect('10.203.209.240','root','25981745');
+$con = new MySQLi("10.203.209.240","root","25981745","data");
 if (!$con)
 {
     die('Could not connect: ' . mysqli_error($con));
 }
 
-mysqli_select_db($con,"data");
+//mysqli_select_db($con,"data");
 
-mysqli_set_charset($con, "utf8");
+//mysqli_set_charset($con, "utf8");
 
 $tok = strtok($q," ");
 if ($tok == "1") {
@@ -39,7 +40,8 @@ else {
   exit;
 }
 
-$result = mysqli_query($con,$sql);
+//$result = mysqli_query($con,$sql);
+$result = $con->query($sql);
 
 echo "<br>
 <br><hr><br><table border='1'>
@@ -50,18 +52,21 @@ echo "<br>
 <th>name</th>
 <th>faculty</th>
 </tr>";
+if($result){
+  while($row = mysqli_fetch_array($result))
+  {
+      echo "<tr>";
+      echo "<td>" . $row['url'] . "</td>";
+      echo "<td>" . $row['id'] . "</td>";
+      echo "<td>" . $row['hospital'] . "</td>";
+      echo "<td>" . $row['name'] . "</td>";
+      echo "<td>" . $row['faculty'] . "</td>";
+      echo "</tr>";
+  }
+  echo "</table><br><hr><br><br><br>";
 
-while($row = mysqli_fetch_array($result))
-{
-    echo "<tr>";
-    echo "<td>" . $row['url'] . "</td>";
-    echo "<td>" . $row['id'] . "</td>";
-    echo "<td>" . $row['hospital'] . "</td>";
-    echo "<td>" . $row['name'] . "</td>";
-    echo "<td>" . $row['faculty'] . "</td>";
-    echo "</tr>";
 }
-echo "</table><br><hr><br><br><br>";
+
 
 mysqli_close($con);
 ?>
