@@ -1,5 +1,5 @@
 <?php
-//header("Access-Control-Allow-Origin：http://");
+header("Access-Control-Allow-Origin：http://Derrickers.github.io");
 $q = isset($_GET["q"]) ? intval($_GET["q"]) : '';
 
 if(empty($q)) {
