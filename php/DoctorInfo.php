@@ -7,13 +7,13 @@ if(empty($q)) {
     exit;
 }
 
-$con = mysqli_connect('10.203.209.240','root','25981745','data');
+$con = mysqli_connect('10.203.209.240','root','25981745');
 if (!$con)
 {
     die('Could not connect: ' . mysqli_error($con));
 }
 
-mysqli_select_db($con,"test");
+mysqli_select_db($con,"data");
 
 mysqli_set_charset($con, "utf8");
 
@@ -41,7 +41,7 @@ else {
 
 $result = mysqli_query($con,$sql);
 
-/*echo "<br>
+echo "<br>
 <br><hr><br><table border='1'>
 <tr>
 <th>url</th>
@@ -49,7 +49,7 @@ $result = mysqli_query($con,$sql);
 <th>hospital</th>
 <th>name</th>
 <th>faculty</th>
-</tr>";*/
+</tr>";
 
 while($row = mysqli_fetch_array($result))
 {
