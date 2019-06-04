@@ -43,7 +43,7 @@ else {
 //$result = mysqli_query($con,$sql);
 $result = $con->query($sql);
 
-echo "<br>
+/*echo "<br>
 <br><hr><br><table border='1'>
 <tr>
 <th>url</th>
@@ -51,7 +51,7 @@ echo "<br>
 <th>hospital</th>
 <th>name</th>
 <th>faculty</th>
-</tr>";
+</tr>";*/
 if($result){
   while($row = mysqli_fetch_array($result))
   {
