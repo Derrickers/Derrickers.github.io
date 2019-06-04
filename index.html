@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>医生信息检索系统</title>
+  <script>
+    function showInfo() {
+      var str, mtd;
+      str = document.getElementById("Info").value;
+      mth = document.getElementById("Themethod").value;
+      if (str == "" || mtd == "") {
+        document.getElementById("txtHint").innerHTML = "<br><br><hr><br><br><br><br><br><br><br><br><br><br><h1 style=\"text-align:center\">请输入检索信息</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br>";
+        return;
+      }
+
+      if (window.XMLHttpRequest) {
+        // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        // IE6, IE5 浏览器执行代码
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+        }
+      }
+      xmlhttp.open("GET", "DoctorInfo.php?q=" + mth + str, true);
+      xmlhttp.send();
+    }
+  </script>
+
+
+
+  <style data-styled-components></style>
+  <style>
+    element.style {}
+
+    html,
+    header {
+
+      background-position-x: 0%, 0%;
+      background-position-y: 0%, 0%;
+      background-size: initial, initial;
+      background-repeat-x: repeat, repeat;
+      background-repeat-y: repeat, repeat;
+      background-attachment: scroll, scroll;
+      background-origin: initial, initial;
+      background-clip: initial, initial;
+      background-color: rgb(245, 241, 232);
+      font-size: 100%;
+      height: 100%;
+      line-height: 1.5;
+    }
+
+    html {
+      display: block;
+      color: -internal-root-color;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 2em;
+      box-sizing: border-box;
+    }
+
+    .container:after,
+    .row:after, {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    header {
+      margin: 0 -2em 1.5em;
+      display: block;
+    }
+
+
+    body {
+      color: #000;
+      font-family: 'roboto_light', sans-serif;
+      font-size: 1em;
+      font-weight: 400;
+      display: block;
+    }
+
+    .home {
+      padding: 2.5em 2em 2.5em 2em;
+    }
+
+    .wrap {
+      background: #FFF;
+      margin: -2.5em -2em -3em;
+      padding: 3em 2em 2.5em 2em;
+    }
+
+    div {
+      display: block;
+    }
+
+    footer {
+      background: #2E3128;
+      color: #BBB;
+      font-size: 0.9em;
+      margin: 0 -2.2em -3em;
+      padding: 1.5em 2em 1em 2em;
+      display: block;
+    }
+
+    nav {
+      position: relative;
+      display: block;
+    }
+
+    nav ul {
+      background: #3977A9;
+      list-style: none;
+      margin: 0;
+      text-align: center;
+      width: 100%;
+      padding-left: 0px;
+    }
+
+    ul {
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: -1px 0 0 0;
+      text-align: -webkit-match-parent;
+    }
+
+    select {
+      font-size: 16px;
+
+    }
+
+    input {
+      font-size: 18px;
+    }
+
+    .b {
+      padding: 0;
+      margin: 0;
+      display: block;
+    }
+
+  </style>
+
+
+</head>
+
+<body class="container">
+  <header>
+    <img src="/img/DoctorIS.png" alt="The logo">
+    <nav>
+      <ul>
+        <li></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="wrap home">
+    <div class="getInfo row">
+      <br>
+      <form>
+        <select id="Themethod" name="Themethod">
+          <option value="">选择一个检索方式</option>
+          <option value="1 ">医院名称</option>
+          <option value="2 ">医生姓名</option>
+          <option value="3 ">医生ID</option>
+          <option value="4 ">科室</option>
+        </select>
+        <input id="Info" name="Info" type="text">
+        <input class="thrbutton" type="button" onclick="showInfo()" value="确认">
+      </form>
+      <br>
+    </div>
+
+    <div class="wrap home" id="txtHint">
+      <div class="b">
+        <br>
+        <br><br>
+
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <h3 style="text-align:center">此处将显示医生信息</h3>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><hr><br><br><br>
+
+      </div>
+
+    </div>
+
+  </div>
+  <footer>
+    <div class="b">
+      <br>
+    </div>
+  </footer>
+</body>
+
+
+</html>
