@@ -8,7 +8,7 @@ if(empty($q)) {
 }
 
 //$con = mysqli_connect('10.203.209.240','root','25981745');
-$con = new MySQLi("10.203.209.240","root","25981745","data");
+$con = new MySQLi("localhost","root","25981745","data");
 if (!$con)
 {
     die('Could not connect: ' . mysqli_error($con));
