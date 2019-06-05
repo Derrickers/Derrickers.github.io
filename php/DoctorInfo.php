@@ -14,7 +14,7 @@ if (!$con)
     die('Could not connect: ' . mysqli_error($con));
 }
 else {
-  echo "fffffff";
+  echo "aaaaafffffff";
 }
 
 //mysqli_select_db($con,"data");
