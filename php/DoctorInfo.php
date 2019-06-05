@@ -40,14 +40,7 @@ else {
   exit;
 }
 
-$T = "<table border='1'>
-<tr>
-<th>url</th>
-<th>id</th>
-<th>hospital</th>
-<th>name</th>
-<th>department</th>
-</tr>";
+$T = "<table border='1'><tr><th>url</th><th>id</th><th>hospital</th><th>name</th><th>department</th></tr>";
 
 html_entity_decode($T,ENT_QUOTES, 'UTF-8');
 
