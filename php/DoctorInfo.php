@@ -3,7 +3,7 @@ header("Content-Type:text/html;charset=utf-8");
 $q = isset($_GET["q"]) ? intval($_GET["q"]) : '';
 
 if(empty($q)) {
-    echo '请输入检索条件';
+    echo "请输入检索条件";
     exit;
 }
 
@@ -12,6 +12,9 @@ $con = new MySQLi("10.203.209.240","root","25981745","data");
 if (!$con)
 {
     die('Could not connect: ' . mysqli_error($con));
+}
+else {
+  echo "fffffff";
 }
 
 //mysqli_select_db($con,"data");
@@ -36,7 +39,7 @@ elseif ($tok == "4") {
   $sql="SELECT * FROM doc_info WHERE department = '".$tok."'";
 }
 else {
-  echo '请输入检索条件';
+  echo "请输入检索条件";
   exit;
 }
 
