@@ -41,13 +41,13 @@ else {
 }
 
 $result = mysqli_query($con,$sql);
-if (mysqli_num_rows($result) > 0) {
-    echo "<br><br><hr><br><table border='1'><tr><th>url</th><th>id</th><th>hospital</th><th>name</th><th>faculty</th></tr>";
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "<br><br><hr><br><table border='1'><tr><th>$row['link']</th><th>$row['doc_id']</th><th>$row['hos_name']</th><th>$row['doc_name']</th><th>$row['department']</th></tr>";
-    }
-    echo "</table><br><hr><br><br><br>";
+if($result){
+  echo "<br><br><hr><br><table border='1'><tr><th>url</th><th>id</th><th>hospital</th><th>name</th><th>faculty</th></tr>";
+  while($row = mysqli_fetch_array($result))
+  {
+      echo "<br><br><hr><br><table border='1'><tr><th>$row['link']</th><th>$row['doc_id']</th><th>$row['hos_name']</th><th>$row['doc_name']</th><th>$row['department']</th></tr>";
+  }
+  echo "</table><br><hr><br><br><br>";
 }
-
 mysqli_close($con);
 ?>
