@@ -1,5 +1,5 @@
 <?php
-header("content-type:text/html;charset=utf-8");
+header("Content-Type:text/html;charset=utf-8");
 $q = isset($_GET["q"]) ? intval($_GET["q"]) : '';
 
 if(empty($q)) {
@@ -39,7 +39,8 @@ else {
   echo '请输入检索条件';
   exit;
 }
-echo "<table border='1'>
+
+$T = "<table border='1'>
 <tr>
 <th>url</th>
 <th>id</th>
@@ -48,15 +49,19 @@ echo "<table border='1'>
 <th>department</th>
 </tr>";
 
+html_entity_decode($T,ENT_QUOTES, 'UTF-8');
+
+echo $T;
+
 while($row = mysqli_fetch_array($result))
 {
-    echo "<tr>";
-    echo "<td>" . $row['link'] . "</td>";
-    echo "<td>" . $row['doc_id'] . "</td>";
-    echo "<td>" . $row['hos_name'] . "</td>";
-    echo "<td>" . $row['doc_name'] . "</td>";
-    echo "<td>" . $row['department'] . "</td>";
-    echo "</tr>";
+  echo "<tr>";
+  echo "<td>" . $row['link'] . "</td>";
+  echo "<td>" . $row['doc_id'] . "</td>";
+  echo "<td>" . $row['hos_name'] . "</td>";
+  echo "<td>" . $row['doc_name'] . "</td>";
+  echo "<td>" . $row['department'] . "</td>";
+  echo "</tr>";
 }
 echo "</table>";
 ?>
