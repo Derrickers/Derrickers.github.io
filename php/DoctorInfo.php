@@ -11,8 +11,6 @@ $con = new MySQLi("localhost","root","25981745","data");
 if (!$con)
 {
     die('Could not connect: ' . mysqli_error($con));
-}else {
-  echo "aaaaafffffff";
 }
 
 //mysqli_select_db($con,"data");

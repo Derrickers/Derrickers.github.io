@@ -23,8 +23,7 @@
       }
       xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-          document.getElementById("txtHint").innerHTML =
-            "<table width='95%' border='1'><tr><th>url</th><th>id</th><th>hospital</th><th>name</th><th>department</th></tr><tr><td>NULL</td><td>NULL</td><td>浙江省立同德医院</td><td>孔繁智</td><td>呼吸内科</td></tr><tr><td>NULL</td><td>NULL</td><td>浙江省立同德医院</td><td>李国平</td><td>呼吸内科</td></tr><tr><td>NULL</td><td>NULL</td><td>浙江省立同德医院</td><td>姜琴华</td><td>呼吸内科</td></tr><tr><td>NULL</td><td>NULL</td><td>浙江省立同德医院</td><td>柴秀娟</td><td>呼吸内科</td></tr><tr><td>NULL</td><td>NULL</td><td>浙江省立同德医院</td><td>陈明</td><td>呼吸内科</td></tr><tr><td>NULL</td><td>NULL</td><td>浙江省立同德医院</td><td>周颖</td><td>呼吸内科</td></tr><tr><td>NULL</td><td>NULL</td><td>浙江省立同德医院</td><td>徐卫华</td><td>呼吸内科</td></tr></table><br><br><br>";
+          document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
         }
       }
       xmlhttp.open("GET", "/php/DoctorInfo.php?q=" + mth + str, true);
@@ -75,8 +74,7 @@
     }
 
     .container:after,
-    .row:after,
-      {
+    .row:after, {
       content: "";
       display: table;
       clear: both;
@@ -164,9 +162,6 @@
       display: block;
     }
 
-    td {
-      align: center;
-    }
   </style>
 
 
@@ -203,16 +198,15 @@
         <br>
         <br><br>
 
-        <br><br><br><br>
-        <br><br><br><br>
-        <br><br><br><br>
-        <h3 style="text-align:center">此处将显示医生信息</h3>
-        <br><br><br><br>
-        <br><br><br><br>
-        <br><br><br><br>
-        <br><br><br><br>
-        <br>
-        <hr><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <h3 style="text-align:center">此处将显示医生信息</h3>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><hr><br><br><br>
 
       </div>
 
