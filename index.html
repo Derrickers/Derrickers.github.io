@@ -23,7 +23,7 @@
         document.getElementById("txtHint").innerHTML = "<br><br><hr><br><br><br><br><br><br><br><br><br><br><h1 style=\"text-align:center\">请输入检索信息</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br>";
         return;
       }
-      if (isSpecial()) {
+      if (isSpecial(str)) {
         alert("请勿输入特殊字符！");
       }
       if (mtd == "3") {
