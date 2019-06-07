@@ -6,13 +6,18 @@
   <title>医生信息检索系统</title>
   <script>
     function isDocId(str) {
-      var reg = /^\d{15}$/;
-      return reg.test(str);
+      var temp = /^\d{15}$/;
+      return temp.test(str);
     }
 
     function isSpecial(str) {
-      var patrn = /[`~!@#$%^&*()_\-+=<>?:"{}|,.\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘’，。、]/im;
-      return patrn.test(str);
+      var temp = /[`~!@#$%^&*()_\-+=<>?:"{}|,.\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘’，。、]/im;
+      return temp.test(str);
+    }
+
+    function ischina(str) {
+      var reg = /^[\u4E00-\u9FA5]{2,4}$/;
+      return temp.test(str);
     }
 
     function showInfo() {
@@ -27,11 +32,18 @@
         alert("请勿输入特殊字符！");
         return;
       }
+      if (mth == "2 " || mth == "4 ") {
+        if (ischina(str)) {
+
+        } else {
+          alert("请输入中文！");
+          return;
+        }
+      }
       if (mth == "3 ") {
         if (isDocId(str)) {
-          alert("ss");
-        }
-        else {
+
+        } else {
           alert("请输入15位数字的医生ID！");
           return;
         }
