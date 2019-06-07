@@ -23,7 +23,64 @@
       }
       xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-          document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+          document.getElementById("txtHint").innerHTML = "<table border='1'><tr><th>name</th><th>id</th><th>hospital</th><th>department</th><th>date</th><th>link</th></tr>
+          <tr><td>任常</td><td>110110000019955</td><td>中国医学科学院北京协和医院</td><td>妇科</td><td>2005-10-17</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdegoJt8LgYZIMDlWg3.htm</td></tr>
+          <tr><td>陈丽霞</td><td>110110000009193</td><td>中国医学科学院北京协和医院</td><td>物理医学康复科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLBVlPK9sHYQ8uQGIO.htm</td></tr>
+          <tr><td>袁晶</td><td>110110000015637</td><td>中国医学科学院北京协和医院</td><td>神经科</td><td>2005-10-17</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdexUlJo5tvC5s9enjZ.htm</td></tr>
+          <tr><td>高金明</td><td>110110000008677</td><td>中国医学科学院北京协和医院</td><td>呼吸与危重症医学科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXjUopWkcw-2p57V.htm</td></tr>
+          <tr><td>仉建国</td><td>110110000008938</td><td>中国医学科学院北京协和医院</td><td>骨科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXyrs8VWVmvC3uh7.htm</td></tr>
+          <tr><td>韩冰</td><td>110110000020686</td><td>中国医学科学院北京协和医院</td><td>血液内科</td><td>2006-03-10</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUoztPztx00uSYNw1.htm</td></tr>
+          <tr><td>林国乐</td><td>110110000008959</td><td>中国医学科学院北京协和医院</td><td>基本外科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLPvzeC49LoalFRy9w.htm</td></tr>
+          <tr><td>张弘</td><td>110110000020681</td><td>中国医学科学院北京协和医院</td><td>呼吸与危重症医学科</td><td>2006-03-08</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdeCbILulx2XzuGO4ty.htm</td></tr>
+          <tr><td>连小兰</td><td>110110000008662</td><td>中国医学科学院北京协和医院</td><td>内分泌科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXH217rPeWduCBgU.htm</td></tr>
+          <tr><td>平凡</td><td>110110000001851</td><td>中国医学科学院北京协和医院</td><td>内分泌科</td><td>2002-03-01</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdegojuvonLBKpXQJ1u.htm</td></tr>
+          <tr><td>吴文铭</td><td>110110000001828</td><td>中国医学科学院北京协和医院</td><td>基本外科</td><td>2002-03-01</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLBGa-6ZLYsexE0YC8.htm</td></tr>
+          <tr><td>施举红</td><td>110110000022098</td><td>中国医学科学院北京协和医院</td><td>呼吸与危重症医学科</td><td>2006-09-01</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzduxIRGlzfz6DLFjxaq.htm</td></tr>
+          <tr><td>姜国调</td><td>110110000009115</td><td>中国医学科学院北京协和医院</td><td>皮肤科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXHrq4tx00uSYNw1.htm</td></tr>
+          <tr><td>魏妍平</td><td>110110000000391</td><td>中国医学科学院北京协和医院</td><td>神经科</td><td>2001-08-02</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLBSLDMxEsNJ7qcZX0.htm</td></tr>
+          <tr><td>于昕</td><td>110110000019097</td><td>中国医学科学院北京协和医院</td><td>妇科</td><td>2005-05-12</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLBGa-9SHzEWhYkCqt.htm</td></tr>
+          <tr><td>段明辉</td><td>110110000008678</td><td>中国医学科学院北京协和医院</td><td>血液内科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLeKUlic5-zTRBJvHg.htm</td></tr>
+          <tr><td>李菁</td><td>110110000020001</td><td>中国医学科学院北京协和医院</td><td>风湿免疫科</td><td>2005-10-18</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdeCbINFmRDydDzVOlL.htm</td></tr>
+          <tr><td>王友彬</td><td>110110000016902</td><td>中国医学科学院北京协和医院</td><td>整形外科</td><td>2004-03-05</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLPvktGqEsNJ7qcZX0.htm</td></tr>
+          <tr><td>王迁</td><td>110110000015632</td><td>中国医学科学院北京协和医院</td><td>风湿免疫科</td><td>2003-03-19</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzduTWZaHGUIHuKomU0X.htm</td></tr>
+          <tr><td>王京岚</td><td>110110000008780</td><td>中国医学科学院北京协和医院</td><td>呼吸与危重症医学科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUIjc4gRinOCoXXJe.htm</td></tr>
+          <tr><td>余立江</td><td>120110000001469</td><td>中国医学科学院北京协和医院</td><td>口腔颌面外科</td><td>2005-10-18</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLPvkFh9sHYQ8uQGIO.htm</td></tr>
+          <tr><td>钱文伟</td><td>110110000000466</td><td>中国医学科学院北京协和医院</td><td>骨科</td><td>2001-08-03</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLPfYvkKX3HVJ2rF-e.htm</td></tr>
+          <tr><td>张顺华</td><td>110110000016934</td><td>中国医学科学院北京协和医院</td><td>眼科</td><td>2004-03-05</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLBvMVQfCGGbOLh9BQ.htm</td></tr>
+          <tr><td>许岭翎</td><td>110110000016173</td><td>中国医学科学院北京协和医院</td><td>内分泌科</td><td>2003-11-10</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUmxaYk8JOrYZEIRi.htm</td></tr>
+          <tr><td>霍力</td><td>110110000009135</td><td>中国医学科学院北京协和医院</td><td>核医学科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdeiqXNvmRDydDzVOlL.htm</td></tr>
+          <tr><td>何方方</td><td>110110000009038</td><td>中国医学科学院北京协和医院</td><td>内分泌与生殖妇科中心</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXyboU0lPR5qqdfm.htm</td></tr>
+          <tr><td>金力</td><td>110110000008993</td><td>中国医学科学院北京协和医院</td><td>计划生育</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzduKpli2r4uSXys8lfo.htm</td></tr>
+          <tr><td>金力</td><td>110110000008993</td><td>中国医学科学院北京协和医院</td><td>妇科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLBGa-cTyyMxUNjSNk.htm</td></tr>
+          <tr><td>孙曦羽</td><td>110110000007779</td><td>中国医学科学院北京协和医院</td><td>基本外科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLeDWGpOLYsexE0YC8.htm</td></tr>
+          <tr><td>薛华丹</td><td>110110000016942</td><td>中国医学科学院北京协和医院</td><td>放射科</td><td>2004-03-05</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdeCqWHdxr5q33q1fJD.htm</td></tr>
+          <tr><td>任彤</td><td>110110000009034</td><td>中国医学科学院北京协和医院</td><td>妇科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdeZXJr4gnLBKpXQJ1u.htm</td></tr>
+          <tr><td>窦万臣</td><td>110110000019970</td><td>中国医学科学院北京协和医院</td><td>神经外科</td><td>2005-10-17</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUEQqb94wkiNDMHtx.htm</td></tr>
+          <tr><td>严维刚</td><td>110110000000463</td><td>中国医学科学院北京协和医院</td><td>泌尿外科</td><td>2001-08-03</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXj77PTaJfDy6Cbc.htm</td></tr>
+          <tr><td>童安莉</td><td>110110000015669</td><td>中国医学科学院北京协和医院</td><td>内分泌科</td><td>2003-03-19</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXH2q51t4xLBGs4w.htm</td></tr>
+          <tr><td>刘晓清</td><td>110110000008790</td><td>中国医学科学院北京协和医院</td><td>感染内科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXyr27rPeWduCBgU.htm</td></tr>
+          <tr><td>桑新亭</td><td>110110000008911</td><td>中国医学科学院北京协和医院</td><td>肝脏外科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXjqU3Urabz6vEQg.htm</td></tr>
+          <tr><td>马冬捷</td><td>110110000022199</td><td>中国医学科学院北京协和医院</td><td>胸外科</td><td>2006-09-14</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdeCqW-sflZMGILTrbd.htm</td></tr>
+          <tr><td>黄慧</td><td>110110000001844</td><td>中国医学科学院北京协和医院</td><td>呼吸与危重症医学科</td><td>2002-03-01</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLBGIJ9SHzEWhYkCqt.htm</td></tr>
+          <tr><td>高瑞通</td><td>110110000000418</td><td>中国医学科学院北京协和医院</td><td>肾内科</td><td>2001-08-02</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLPDMVJvKSvlgzgq2c.htm</td></tr>
+          <tr><td>何艳燕</td><td>110110000009063</td><td>中国医学科学院北京协和医院</td><td>儿科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXyOOoRinOCoXXJe.htm</td></tr>
+          <tr><td>冯宾</td><td>110110000022190</td><td>中国医学科学院北京协和医院</td><td>骨科</td><td>2006-09-14</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdewUlwXYj6dZX-ciU9.htm</td></tr>
+          <tr><td>茅枫</td><td>110110000000454</td><td>中国医学科学院北京协和医院</td><td>乳腺外科</td><td>2001-08-03</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLPvQdZUNoD0ioO33P.htm</td></tr>
+          <tr><td>王以朋</td><td>110110000008937</td><td>中国医学科学院北京协和医院</td><td>骨科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXy5sBfmw7E-sSlj.htm</td></tr>
+          <tr><td>刘小伟</td><td>110110000021803</td><td>中国医学科学院北京协和医院</td><td>眼科</td><td>2006-06-16</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLBGIJtwMEBi1InoYl.htm</td></tr>
+          <tr><td>王琳</td><td>110110000007735</td><td>中国医学科学院北京协和医院</td><td>神经科</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXH76fJefaGY-Fi8.htm</td></tr>
+          <tr><td>周毅</td><td>110110000001834</td><td>中国医学科学院北京协和医院</td><td>泌尿外科</td><td>2002-03-01</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzduh2kZlzfz6DLFjxaq.htm</td></tr>
+          <tr><td>宿玉成</td><td>120110000000445</td><td>中国医学科学院北京协和医院</td><td>口腔种植</td><td>2002-10-24</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLPvkeyBFq-tVG1BZ1.htm</td></tr>
+          <tr><td>杨明</td><td>110110000015636</td><td>中国医学科学院北京协和医院</td><td>心内科</td><td>2003-03-19</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLVgOyPj3KCctdxdDa.htm</td></tr>
+          <tr><td>张枝桥</td><td>110110000019973</td><td>中国医学科学院北京协和医院</td><td>眼科</td><td>2005-10-17</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLBSLTHZLYsexE0YC8.htm</td></tr>
+          <tr><td>黄晓明</td><td>110110000000387</td><td>中国医学科学院北京协和医院</td><td>普通内科</td><td>2001-08-02</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLPflDLKX3HVJ2rF-e.htm</td></tr>
+          <tr><td>曲璇</td><td>110110000002126</td><td>中国医学科学院北京协和医院</td><td>老年医学科</td><td>2002-08-29</td><td>https://www.haodf.com/doctor/DE4r0eJWGqZNgzPx1mlQo73vy8xIEOiT.htm</td></tr>
+          <tr><td>程欣</td><td>110110000016952</td><td>中国医学科学院北京协和医院</td><td>核医学科</td><td>2004-03-05</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzdeCONKob1qIYC2U8VE.htm</td></tr>
+          <tr><td>应红艳</td><td>110110000000383</td><td>中国医学科学院北京协和医院</td><td>肿瘤内科</td><td>2001-08-02</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzduCUR-bsPGYy9dgccG.htm</td></tr>
+          <tr><td>张玉石</td><td>110110000022553</td><td>中国医学科学院北京协和医院</td><td>泌尿外科</td><td>2006-10-30</td><td>https://www.haodf.com/doctor/DE4r0BCkuHzduZ0K1qceCoEzBhPT2.htm</td></tr>
+          <tr><td>王晓巍</td><td>110110000000551</td><td>中国医学科学院北京协和医院</td><td>耳鼻喉科</td><td>2001-08-03</td><td>https://www.haodf.com/doctor/DE4rO-XCoLUXypooRinOCoXXJe.htm</td></tr>
+          <tr><td>周皎琳</td><td>110110000015647</td><td>中国医学科学院北京协和医院</td><td>基本外科</td><td>2003-03-19</td><td>https://www.haodf.com/doctor/DE4r08xQdKSLFZEH6hY2Krrpb6FW.htm</td></tr>
+          </table><br><br><br>";
         }
       }
       xmlhttp.open("GET", "/php/DoctorInfo.php?q=" + mth + str, true);
