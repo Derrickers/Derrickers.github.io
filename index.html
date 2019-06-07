@@ -25,12 +25,14 @@
       }
       if (isSpecial(str)) {
         alert("请勿输入特殊字符！");
+        return;
       }
       if (mtd == "3") {
         if (isDocId(str)) {
 
         } else {
           alert("请输入15位数字的医生ID！");
+          return;
         }
       }
 
